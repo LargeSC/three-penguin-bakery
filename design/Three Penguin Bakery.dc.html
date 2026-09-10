@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#FBF7F2;font-family:Nunito,system-ui,sans-serif;color:#2B2B31;-webkit-font-smoothing:antialiased}
+  a{color:#D4547F;text-decoration:none}
+  a:hover{color:#B33C66}
+  @keyframes tpb-float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}
+  @keyframes tpb-fall{0%{transform:translateY(-40px) rotate(0deg);opacity:0}8%{opacity:1}90%{opacity:1}100%{transform:translateY(105vh) rotate(420deg);opacity:0}}
+  @keyframes tpb-pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+  *{box-sizing:border-box}
+</style>
+</helmet>
+<div style="overflow:hidden">
+
+  <header style="position:relative;padding:22px 18px 0;background:#FDFBF8;background-image:radial-gradient(circle at 18% 6%, rgba(168,197,224,.30) 0 20%, transparent 20.5%),radial-gradient(circle at 86% 4%, rgba(232,116,154,.16) 0 15%, transparent 15.5%);border-bottom:2px solid rgba(23,23,26,.10)">
+    <sc-if value="{{ sprinkles }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+        <span style="position:absolute;top:0;left:5%;width:26px;height:9px;border-radius:9px;background:#E8749A;animation:tpb-fall 6.5s linear -0.4s infinite"></span>
+        <span style="position:absolute;top:0;left:13%;width:20px;height:8px;border-radius:8px;background:#F5B942;animation:tpb-fall 8.2s linear -2.1s infinite"></span>
+        <span style="position:absolute;top:0;left:22%;width:24px;height:9px;border-radius:9px;background:#A8C5E0;animation:tpb-fall 7.1s linear -4.6s infinite"></span>
+        <span style="position:absolute;top:0;left:31%;width:18px;height:7px;border-radius:7px;background:#4A4A52;animation:tpb-fall 9.4s linear -1.2s infinite"></span>
+        <span style="position:absolute;top:0;left:41%;width:22px;height:8px;border-radius:8px;background:#E8749A;animation:tpb-fall 7.8s linear -5.9s infinite"></span>
+        <span style="position:absolute;top:0;left:50%;width:26px;height:9px;border-radius:9px;background:#F5B942;animation:tpb-fall 6.9s linear -3.3s infinite"></span>
+        <span style="position:absolute;top:0;left:59%;width:19px;height:8px;border-radius:8px;background:#A8C5E0;animation:tpb-fall 8.7s linear -0.9s infinite"></span>
+        <span style="position:absolute;top:0;left:68%;width:23px;height:9px;border-radius:9px;background:#E8749A;animation:tpb-fall 7.4s linear -6.5s infinite"></span>
+        <span style="position:absolute;top:0;left:77%;width:20px;height:8px;border-radius:8px;background:#4A4A52;animation:tpb-fall 9.1s linear -2.7s infinite"></span>
+        <span style="position:absolute;top:0;left:86%;width:25px;height:9px;border-radius:9px;background:#F5B942;animation:tpb-fall 6.6s linear -4.1s infinite"></span>
+        <span style="position:absolute;top:0;left:94%;width:21px;height:8px;border-radius:8px;background:#A8C5E0;animation:tpb-fall 8.4s linear -1.8s infinite"></span>
+      </div>
+    </sc-if>
+
+    <div style="position:relative;max-width:1060px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:3px solid #17171A;border-radius:999px;background:#F5B942;box-shadow:0 3px 0 #17171A;font-weight:700;font-size:14px;line-height:1.2">
+        <span>🐧🎂</span><span>Horneamos y entregamos solo en Puerto Vallarta</span>
+      </div>
+
+      <img src="assets/logo.jpeg" alt="Three Penguin Bakery — pingüino pastelero" style="width:min(56vw,260px);height:auto;mix-blend-mode:multiply;animation:tpb-float 5.5s ease-in-out infinite;margin:-4px 0 -8px">
+
+      <h1 style="margin:0;font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:clamp(2.1rem,8.5vw,4.2rem);line-height:.95;color:#17171A;letter-spacing:-.01em;text-wrap:balance">Three Penguin<br><span style="color:#fff;-webkit-text-stroke:3px #17171A;paint-order:stroke fill">Bakery</span></h1>
+
+      <p style="margin:12px 0 0;max-width:34ch;font-size:clamp(15px,3.8vw,19px);font-weight:600;color:#2B2B31;line-height:1.45;text-wrap:pretty">Pasteles hechos con cariño por Felipe, 8 años, repostero oficial y jefe de chispas.</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:6px 0 26px">
+        <a href="#menu" style="display:inline-block;padding:13px 24px;min-height:48px;border:3px solid #17171A;border-radius:999px;background:#E8749A;color:#fff;font-weight:800;font-size:16px;box-shadow:0 4px 0 #17171A" style-hover="transform:translateY(2px);box-shadow:0 2px 0 #17171A;color:#fff">Ver los pasteles</a>
+        <a href="#pedir" style="display:inline-block;padding:13px 24px;min-height:48px;border:3px solid #17171A;border-radius:999px;background:#fff;color:#17171A;font-weight:800;font-size:16px;box-shadow:0 4px 0 #17171A" style-hover="transform:translateY(2px);box-shadow:0 2px 0 #17171A;color:#17171A">Pedir por correo</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="menu" style="max-width:1060px;margin:0 auto;padding:38px 18px 8px;scroll-margin-top:12px">
+    <h2 style="margin:0 0 4px;font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:clamp(1.6rem,6vw,2.6rem);color:#17171A;text-align:center">Nuestros 3 pasteles</h2>
+    <p style="margin:0 0 24px;text-align:center;font-weight:600;color:#6A6A73;font-size:15px">Cada uno se hornea por pedido. Avísanos 2 días antes 💛</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:20px">
+
+      <article style="display:flex;flex-direction:column;background:#fff;border:3px solid #17171A;border-radius:24px;box-shadow:0 6px 0 #17171A;overflow:hidden" style-hover="transform:translateY(-4px)">
+        <div style="position:relative;aspect-ratio:4/3;background:#6B4A3A;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.10) 0 10px,transparent 10px 20px);border-bottom:3px solid #17171A;display:flex;align-items:center;justify-content:center">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:6px;text-align:center">foto: Cocoa Explosion</span>
+          <span style="position:absolute;top:10px;left:10px;padding:5px 11px;border:3px solid #17171A;border-radius:999px;background:#F5B942;font-weight:800;font-size:13px">Chocolatoso</span>
+        </div>
+        <div style="padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <h3 style="margin:0;font-family:'Baloo 2',Nunito,sans-serif;font-weight:700;font-size:22px;color:#17171A">Cocoa Explosion</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A4A52;font-weight:600;text-wrap:pretty">Bizcocho de chocolate doble con relleno cremoso de cocoa. Para los que dicen "más chocolate, por favor".</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px">
+            <span style="font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:26px;color:#17171A">$350</span>
+            <span style="font-size:12px;font-weight:700;color:#6A6A73">8–10 rebanadas</span>
+          </div>
+          <a href="mailto:threepenguinbakery@gmail.com?subject=Pedido%3A%20Cocoa%20Explosion&amp;body=%C2%A1Hola%20Three%20Penguin%20Bakery!%0A%0AQuiero%20pedir%20un%20Cocoa%20Explosion%20(%24350).%0A%0ANombre%3A%20%0AFecha%20que%20lo%20necesito%3A%20%0AColonia%20en%20Puerto%20Vallarta%3A%20%0ATel%C3%A9fono%2FWhatsApp%3A%20%0A%0AGracias!" style="display:block;text-align:center;padding:14px;min-height:48px;border:3px solid #17171A;border-radius:14px;background:#E8749A;color:#fff;font-weight:800;font-size:16px;box-shadow:0 4px 0 #17171A" style-hover="transform:translateY(2px);box-shadow:0 2px 0 #17171A;color:#fff">Pedir por correo</a>
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;background:#fff;border:3px solid #17171A;border-radius:24px;box-shadow:0 6px 0 #17171A;overflow:hidden" style-hover="transform:translateY(-4px)">
+        <div style="position:relative;aspect-ratio:4/3;background:#E8749A;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.16) 0 10px,transparent 10px 20px);border-bottom:3px solid #17171A;display:flex;align-items:center;justify-content:center">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.32);padding:6px 10px;border-radius:6px;text-align:center">foto: Happy Sprinkle Surprise</span>
+          <span style="position:absolute;top:10px;left:10px;padding:5px 11px;border:3px solid #17171A;border-radius:999px;background:#fff;font-weight:800;font-size:13px">El más pedido</span>
+        </div>
+        <div style="padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <h3 style="margin:0;font-family:'Baloo 2',Nunito,sans-serif;font-weight:700;font-size:22px;color:#17171A">Happy Sprinkle Surprise</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A4A52;font-weight:600;text-wrap:pretty">Vainilla suave, betún rosa y muchísimas chispas de colores. Adentro hay una sorpresa dulce.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px">
+            <span style="font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:26px;color:#17171A">$299</span>
+            <span style="font-size:12px;font-weight:700;color:#6A6A73">8 rebanadas</span>
+          </div>
+          <a href="mailto:threepenguinbakery@gmail.com?subject=Pedido%3A%20Happy%20Sprinkle%20Surprise&amp;body=%C2%A1Hola%20Three%20Penguin%20Bakery!%0A%0AQuiero%20pedir%20un%20Happy%20Sprinkle%20Surprise%20(%24299).%0A%0ANombre%3A%20%0AFecha%20que%20lo%20necesito%3A%20%0AColonia%20en%20Puerto%20Vallarta%3A%20%0ATel%C3%A9fono%2FWhatsApp%3A%20%0A%0AGracias!" style="display:block;text-align:center;padding:14px;min-height:48px;border:3px solid #17171A;border-radius:14px;background:#A8C5E0;color:#17171A;font-weight:800;font-size:16px;box-shadow:0 4px 0 #17171A" style-hover="transform:translateY(2px);box-shadow:0 2px 0 #17171A;color:#17171A">Pedir por correo</a>
+        </div>
+      </article>
+
+      <article style="display:flex;flex-direction:column;background:#fff;border:3px solid #17171A;border-radius:24px;box-shadow:0 6px 0 #17171A;overflow:hidden" style-hover="transform:translateY(-4px)">
+        <div style="position:relative;aspect-ratio:4/3;background:#A8C5E0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.30) 0 10px,transparent 10px 20px);border-bottom:3px solid #17171A;display:flex;align-items:center;justify-content:center">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.35);padding:6px 10px;border-radius:6px;text-align:center">foto: A Sweet for Two</span>
+          <span style="position:absolute;top:10px;left:10px;padding:5px 11px;border:3px solid #17171A;border-radius:999px;background:#F5B942;font-weight:800;font-size:13px">Chiquito</span>
+        </div>
+        <div style="padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <h3 style="margin:0;font-family:'Baloo 2',Nunito,sans-serif;font-weight:700;font-size:22px;color:#17171A">A Sweet for Two</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A4A52;font-weight:600;text-wrap:pretty">Pastelito para compartir entre dos. Perfecto para un antojo de tarde o un regalito sorpresa.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px">
+            <span style="font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:26px;color:#17171A">$200</span>
+            <span style="font-size:12px;font-weight:700;color:#6A6A73">2 rebanadas</span>
+          </div>
+          <a href="mailto:threepenguinbakery@gmail.com?subject=Pedido%3A%20A%20Sweet%20for%20Two&amp;body=%C2%A1Hola%20Three%20Penguin%20Bakery!%0A%0AQuiero%20pedir%20un%20A%20Sweet%20for%20Two%20(%24200).%0A%0ANombre%3A%20%0AFecha%20que%20lo%20necesito%3A%20%0AColonia%20en%20Puerto%20Vallarta%3A%20%0ATel%C3%A9fono%2FWhatsApp%3A%20%0A%0AGracias!" style="display:block;text-align:center;padding:14px;min-height:48px;border:3px solid #17171A;border-radius:14px;background:#F5B942;color:#17171A;font-weight:800;font-size:16px;box-shadow:0 4px 0 #17171A" style-hover="transform:translateY(2px);box-shadow:0 2px 0 #17171A;color:#17171A">Pedir por correo</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <sc-if value="{{ helper }}" hint-placeholder-val="{{ true }}">
+  <section id="pedir" style="max-width:640px;margin:38px auto 0;padding:0 18px;scroll-margin-top:12px">
+    <div style="background:#fff;border:3px solid #17171A;border-radius:26px;box-shadow:0 6px 0 #17171A;padding:22px 18px 24px">
+      <h2 style="margin:0 0 4px;font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:clamp(1.4rem,5.5vw,2rem);color:#17171A">Armar mi pedido</h2>
+      <p style="margin:0 0 18px;font-size:14px;font-weight:600;color:#6A6A73">Llena esto y se abre tu correo con todo listo para enviar.</p>
+
+      <label style="display:block;font-weight:800;font-size:14px;margin-bottom:6px">¿Cuál pastel?</label>
+      <div style="display:grid;gap:8px;margin-bottom:16px">
+        <button type="button" onClick="{{ pickCocoa }}" style="{{ btnCocoa }}">Cocoa Explosion · $350</button>
+        <button type="button" onClick="{{ pickSprinkle }}" style="{{ btnSprinkle }}">Happy Sprinkle Surprise · $299</button>
+        <button type="button" onClick="{{ pickTwo }}" style="{{ btnTwo }}">A Sweet for Two · $200</button>
+      </div>
+
+      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+        <div>
+          <label for="tpb-name" style="display:block;font-weight:800;font-size:14px;margin-bottom:6px">Tu nombre</label>
+          <input id="tpb-name" type="text" value="{{ name }}" onChange="{{ onName }}" placeholder="Ana" style="width:100%;padding:12px 14px;min-height:48px;font:600 16px Nunito,sans-serif;border:3px solid #17171A;border-radius:14px;background:#FBF7F2;color:#17171A">
+        </div>
+        <div>
+          <label for="tpb-date" style="display:block;font-weight:800;font-size:14px;margin-bottom:6px">¿Para cuándo?</label>
+          <input id="tpb-date" type="date" value="{{ date }}" onChange="{{ onDate }}" style="width:100%;padding:12px 14px;min-height:48px;font:600 16px Nunito,sans-serif;border:3px solid #17171A;border-radius:14px;background:#FBF7F2;color:#17171A">
+        </div>
+        <div style="grid-column:1/-1">
+          <label for="tpb-zone" style="display:block;font-weight:800;font-size:14px;margin-bottom:6px">Colonia en Puerto Vallarta</label>
+          <input id="tpb-zone" type="text" value="{{ zone }}" onChange="{{ onZone }}" placeholder="Versalles, Fluvial, Centro…" style="width:100%;padding:12px 14px;min-height:48px;font:600 16px Nunito,sans-serif;border:3px solid #17171A;border-radius:14px;background:#FBF7F2;color:#17171A">
+        </div>
+      </div>
+
+      <button type="button" onClick="{{ send }}" style="width:100%;margin-top:18px;padding:15px;min-height:52px;border:3px solid #17171A;border-radius:16px;background:#E8749A;color:#fff;font:800 17px 'Baloo 2',Nunito,sans-serif;box-shadow:0 5px 0 #17171A;cursor:pointer" style-hover="transform:translateY(2px);box-shadow:0 3px 0 #17171A">Abrir mi correo de pedido ✉️</button>
+      <p style="margin:12px 0 0;font-size:13px;font-weight:700;color:#6A6A73;text-align:center">{{ status }}</p>
+    </div>
+  </section>
+  </sc-if>
+
+  <footer style="margin-top:40px;padding:30px 18px 34px;background:#4A4A52;color:#fff;border-top:5px solid #17171A">
+    <div style="max-width:1060px;margin:0 auto;display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start">
+      <div style="min-width:220px">
+        <p style="margin:0 0 6px;font-family:'Baloo 2',Nunito,sans-serif;font-weight:800;font-size:22px">Three Penguin Bakery</p>
+        <p style="margin:0;font-size:15px;font-weight:600;color:#E4E4EA;line-height:1.6">Puerto Vallarta, Jalisco<br><a href="mailto:threepenguinbakery@gmail.com" style="color: rgb(245, 185, 66); font-weight: 700;">threepenguinbakery@gmail.com</a><br></p>
+      </div>
+      <div style="max-width:36ch">
+        <p style="margin:0;padding:12px 16px;border:3px solid #17171A;border-radius:18px;background:#F5B942;color:#17171A;font-weight:800;font-size:15px;line-height:1.45">🐧🎂 Solo tomamos pedidos y entregamos dentro de Puerto Vallarta. Fuera de la ciudad todavía no llegamos… ¡pero algún día!</p>
+      </div>
+    </div>
+    <p style="max-width:1060px;margin:22px auto 0;font-size:13px;color:#B9B9C4;font-weight:600">Hecho con cariño (y muchas chispas) por Felipe, 8 años.</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showOrderHelper&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showSprinkles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;threepenguinbakery@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { cake: "Happy Sprinkle Surprise", name: "", date: "", zone: "", status: "" };
+
+  btn(active) {
+    return {
+      padding: "13px 14px", minHeight: "48px", textAlign: "left", cursor: "pointer",
+      font: "800 15px Nunito, sans-serif",
+      border: "3px solid #17171A", borderRadius: "14px",
+      background: active ? "#A8C5E0" : "#FBF7F2",
+      color: "#17171A",
+      boxShadow: active ? "0 3px 0 #17171A" : "none",
+      transform: active ? "translateY(-1px)" : "none"
+    };
+  }
+
+  price(cake) {
+    return { "Cocoa Explosion": 350, "Happy Sprinkle Surprise": 299, "A Sweet for Two": 200 }[cake] || "";
+  }
+
+  send = () => {
+    const { cake, name, date, zone } = this.state;
+    const body = [
+      "¡Hola Three Penguin Bakery!", "",
+      `Quiero pedir un ${cake} ($${this.price(cake)}).`, "",
+      `Nombre: ${name}`,
+      `Fecha que lo necesito: ${date}`,
+      `Colonia en Puerto Vallarta: ${zone}`,
+      "Teléfono/WhatsApp: ", "", "Gracias!"
+    ].join("\n");
+    const email = this.props.email || "threepenguinbakery@gmail.com";
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent("Pedido: " + cake)}&body=${encodeURIComponent(body)}`;
+    this.setState({ status: "Abrimos tu correo con el pedido de " + cake + " ✉️" });
+  };
+
+  renderVals() {
+    const s = this.state;
+    return {
+      helper: this.props.showOrderHelper ?? true,
+      sprinkles: this.props.showSprinkles ?? true,
+      name: s.name, date: s.date, zone: s.zone,
+      status: s.status || "Nada se envía solo: revisa el correo antes de mandarlo.",
+      onName: e => this.setState({ name: e.target.value }),
+      onDate: e => this.setState({ date: e.target.value }),
+      onZone: e => this.setState({ zone: e.target.value }),
+      pickCocoa: () => this.setState({ cake: "Cocoa Explosion" }),
+      pickSprinkle: () => this.setState({ cake: "Happy Sprinkle Surprise" }),
+      pickTwo: () => this.setState({ cake: "A Sweet for Two" }),
+      btnCocoa: this.btn(s.cake === "Cocoa Explosion"),
+      btnSprinkle: this.btn(s.cake === "Happy Sprinkle Surprise"),
+      btnTwo: this.btn(s.cake === "A Sweet for Two"),
+      send: this.send
+    };
+  }
+}
+</script>
+</body>
+</html>
