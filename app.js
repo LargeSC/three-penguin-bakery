@@ -35,6 +35,7 @@
     var cake = selectedCake();
     var name = form.elements.name.value.trim();
     var zone = form.elements.zone.value.trim();
+    var phone = form.elements.phone.value.trim();
 
     var body = [
       "¡Hola Three Penguin Bakery!",
@@ -44,7 +45,7 @@
       "Nombre: " + name,
       "Fecha que lo necesito: " + formatDate(dateInput.value),
       "Colonia en Puerto Vallarta: " + zone,
-      "Teléfono/WhatsApp: ",
+      "Teléfono/WhatsApp: " + phone,
       "",
       "Gracias!"
     ].join("\n");

@@ -476,6 +476,9 @@ a:hover { color: var(--link-hover); }
 
 .field--wide { grid-column: 1 / -1; }
 
+/* Sin esto, un hijo de grid nunca se encoge por debajo de su ancho intrínseco. */
+.field { min-width: 0; }
+
 .field__label {
   display: block;
   padding: 0;
@@ -494,6 +497,19 @@ a:hover { color: var(--link-hover); }
   border-radius: 14px;
   background: var(--paper);
   color: var(--ink);
+}
+
+/* WebKit (iOS) le da al input[type=date] un ancho intrínseco propio que ignora
+   el width:100% y se desborda de la tarjeta en pantallas angostas. */
+.field__input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  max-width: 100%;
+}
+.field__input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  margin: 0;
 }
 
 .order__submit {
