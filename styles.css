@@ -277,13 +277,13 @@ a:hover { color: var(--link-hover); }
   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, .30) 0 10px, transparent 10px 20px);
 }
 
-/* Cuando haya foto real, reemplaza el div por <img class="cake__photo-img"> */
+/* Foto real: va dentro de .cake__photo para que la etiqueta quede encima. */
 .cake__photo-img {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  border-bottom: var(--stroke);
 }
 
 .cake__photo-note {
@@ -352,6 +352,28 @@ a:hover { color: var(--link-hover); }
   font-size: 26px;
   color: var(--ink);
 }
+
+.cake__prices {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 10px 0 0;
+  display: grid;
+  gap: 4px;
+}
+.cake__prices li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--slate);
+}
+.cake__prices li + li {
+  border-top: 2px dashed rgba(0, 0, 0, .12);
+  padding-top: 4px;
+}
+.cake__prices .cake__price { font-size: 22px; }
 
 .cake__slices {
   font-size: 12px;
@@ -434,7 +456,15 @@ a:hover { color: var(--link-hover); }
   border: 0;
 }
 
+.picker[hidden] { display: none; }
+
 .picker__opt { display: block; }
+
+.picker__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+}
 
 .picker__opt input {
   position: absolute;
@@ -500,16 +530,41 @@ a:hover { color: var(--link-hover); }
 }
 
 /* WebKit (iOS) le da al input[type=date] un ancho intrínseco propio que ignora
-   el width:100% y se desborda de la tarjeta en pantallas angostas. */
+   el width:100% y se desborda de la tarjeta en pantallas angostas.
+   No basta con tocar el input: las piezas internas del shadow DOM conservan
+   su propio ancho y son las que empujan hacia afuera. */
 .field__input[type="date"] {
   -webkit-appearance: none;
   appearance: none;
+  display: block;
   min-width: 0;
   max-width: 100%;
 }
 .field__input[type="date"]::-webkit-date-and-time-value {
+  width: 100%;
+  min-width: 0;
   text-align: left;
   margin: 0;
+}
+.field__input[type="date"]::-webkit-datetime-edit,
+.field__input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* El icono del calendario no debe robar ancho ni encogerse. */
+.field__input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Red de seguridad: pase lo que pase adentro, nada escapa de la tarjeta.
+   `clip` en vez de `hidden`, y el margen deja respirar el anillo de foco
+   (outline de 3px + offset de 3px) que si no quedaría recortado. */
+.field {
+  overflow: clip;
+  overflow-clip-margin: 6px;
 }
 
 .order__submit {
