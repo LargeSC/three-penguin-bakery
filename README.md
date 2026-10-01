@@ -44,14 +44,17 @@ El campo de fecha se limita a partir de hoy + 2 días, para que empate con el
 
 ## Qué falta / qué cambiar
 
-- **Fotos de los productos.** Cacao Surprise ya tiene foto; las otras dos tarjetas traen
-  un bloque de color a rayas como placeholder. Para poner la foto real, dentro del
-  `<div class="cake__photo …">` sustituye el `<span class="cake__photo-note">` por
-  `<img class="cake__photo-img" src="assets/….jpeg" alt="…">` (la clase ya está en el CSS,
-  recorta a 4:3) y deja el `<span class="cake__tag">` donde está.
+- **Fotos de los productos.** Las tres tarjetas ya tienen foto. Para cambiar una, va como
+  `<img class="cake__photo-img" src="assets/….jpeg" alt="…">` dentro del
+  `<div class="cake__photo …">` (recorta a 4:3), con el `<span class="cake__tag">` después.
+  Si la foto es muy vertical, ajusta el encuadre con `object-position` (ver
+  `.cake__photo-img--cookies` en el CSS).
 - **Precios y nombres** viven en tres lugares por pastel: el texto de la tarjeta, el
   `href` del `mailto:` de esa tarjeta y el `value`/`data-options` del radio en el
   formulario. Si cambia un precio, hay que tocar los tres.
+- **Sabores.** Si un producto se pide por sabor, se listan en `data-flavors` del radio
+  (p. ej. `data-flavors="Fresa|Chocolate|Caramelo"`) y el armador pregunta "¿De qué
+  sabor?". También hay que mencionarlos en el `mailto:` de la tarjeta.
 - **Correo de contacto:** `threepenguinbakery@gmail.com` aparece en los `mailto:` de las
   tarjetas, en `data-email` del formulario y en el pie de página.
 

@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -72,7 +72,7 @@
           </div>
           <div class="cake__body">
             <h3 class="cake__name">Cacao Surprise</h3>
-            <p class="cake__desc">Bizcocho de chocolate doble con relleno cremoso de cocoa. Para los que dicen “más chocolate, por favor”.</p>
+            <p class="cake__desc">Panqué de chocolate doble con betún cremoso de cacao y chispas de chocolate. Para los que dicen “más chocolate, por favor”.</p>
             <p class="cake__meta">
               <span class="cake__price">$585</span>
               <span class="cake__slices">8–10 rebanadas</span>
@@ -106,21 +106,21 @@
 
       <li class="cake-grid__item">
         <article class="cake">
-          <!-- Placeholder: sustituir el cake__photo-note por <img class="cake__photo-img" src="assets/caramel-cupcakes.jpeg" alt="…"> (ver Cacao Surprise) -->
           <div class="cake__photo cake__photo--two">
+            <img class="cake__photo-img cake__photo-img--cupcakes" src="assets/caramel-cupcakes.jpeg" width="899" height="1200" loading="lazy"
+                 alt="Cupcake partido a la mitad con relleno y cubierta de caramelo, sobre una rejilla dorada">
             <span class="cake__tag cake__tag--yellow">Nuevo</span>
-            <span class="cake__photo-note">foto: Caramel Cupcakes</span>
           </div>
           <div class="cake__body">
             <h3 class="cake__name">Caramel Cupcakes</h3>
-            <p class="cake__desc">Cupcakes esponjosos con betún de caramelo. Uno para el antojo o una caja para compartir.</p>
+            <p class="cake__desc">Cupcakes esponjosos con relleno y topping a tu gusto: fresa, chocolate o caramelo.</p>
             <ul class="cake__prices" aria-label="Precios de Caramel Cupcakes">
               <li><span>1 cupcake</span> <span class="cake__price">$40</span></li>
               <li><span>Caja de 6</span> <span class="cake__price">$230</span></li>
               <li><span>Caja de 12</span> <span class="cake__price">$420</span></li>
             </ul>
             <a class="cake__cta cake__cta--yellow"
-               href="mailto:threepenguinbakery@gmail.com?subject=Pedido%3A%20Caramel%20Cupcakes&body=%C2%A1Hola%20Three%20Penguin%20Bakery!%0A%0AQuiero%20pedir%20Caramel%20Cupcakes.%0ACantidad%20(1%2C%206%20o%2012)%3A%20%0A%0ANombre%3A%20%0AFecha%20que%20lo%20necesito%3A%20%0AColonia%20en%20Puerto%20Vallarta%3A%20%0ATel%C3%A9fono%2FWhatsApp%3A%20%0A%0AGracias!">Pedir por correo<span class="u-visually-hidden"> los Caramel Cupcakes</span></a>
+               href="mailto:threepenguinbakery@gmail.com?subject=Pedido%3A%20Caramel%20Cupcakes&body=%C2%A1Hola%20Three%20Penguin%20Bakery!%0A%0AQuiero%20pedir%20Caramel%20Cupcakes.%0ACantidad%20(1%2C%206%20o%2012)%3A%20%0ASabor%20(fresa%2C%20chocolate%20o%20caramelo)%3A%20%0A%0ANombre%3A%20%0AFecha%20que%20lo%20necesito%3A%20%0AColonia%20en%20Puerto%20Vallarta%3A%20%0ATel%C3%A9fono%2FWhatsApp%3A%20%0A%0AGracias!">Pedir por correo<span class="u-visually-hidden"> los Caramel Cupcakes</span></a>
           </div>
         </article>
       </li>
@@ -150,7 +150,7 @@
           <span class="picker__face">WD Cookies · desde $75</span>
         </label>
         <label class="picker__opt">
-          <input type="radio" name="cake" value="Caramel Cupcakes" data-options="1 cupcake:40|Caja de 6:230|Caja de 12:420">
+          <input type="radio" name="cake" value="Caramel Cupcakes" data-options="1 cupcake:40|Caja de 6:230|Caja de 12:420" data-flavors="Fresa|Chocolate|Caramelo">
           <span class="picker__face">Caramel Cupcakes · desde $40</span>
         </label>
       </fieldset>
@@ -158,6 +158,11 @@
       <fieldset class="picker picker--qty" id="qty-picker" hidden>
         <legend class="field__label">¿Cuántos?</legend>
         <div class="picker__row" id="qty-options"></div>
+      </fieldset>
+
+      <fieldset class="picker picker--flavor" id="flavor-picker" hidden>
+        <legend class="field__label">¿De qué sabor?</legend>
+        <div class="picker__row" id="flavor-options"></div>
       </fieldset>
 
       <div class="fields">
@@ -200,6 +205,6 @@
   <p class="footer__colophon">Hecho con cariño (y muchas chispas) por Felipe, 8 años.</p>
 </footer>
 
-<script src="app.js?v=2" defer></script>
+<script src="app.js?v=3" defer></script>
 </body>
 </html>

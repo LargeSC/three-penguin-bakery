@@ -287,6 +287,7 @@ a:hover { color: var(--link-hover); }
 }
 /* La foto es muy vertical: subimos el encuadre para que se vean las galletas. */
 .cake__photo-img--cookies { object-position: 50% 37%; }
+.cake__photo-img--cupcakes { object-position: 50% 40%; }
 
 .cake__photo-note {
   font-family: ui-monospace, Menlo, monospace;
